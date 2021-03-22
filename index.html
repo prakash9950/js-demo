@@ -5,6 +5,9 @@
           accessToken: "31edaefe06424154b53688d621e63959",
           captureUncaught: true,
           captureUnhandledRejections: true,
+		  server: {
+		  	  branch: "main"
+		  }
           payload: {
               environment: "production",
 			  foo: "bar",
@@ -38,7 +41,7 @@
     <script>
 
       function error() {
-		  var message = createMessage("donation received")
+		  var message = newMessage("donation received")
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
