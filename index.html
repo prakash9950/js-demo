@@ -38,7 +38,7 @@
     <script>
 
       function error() {
-		  var message = getMessage("donation received")
+		  var message = createMessage("donation received")
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
