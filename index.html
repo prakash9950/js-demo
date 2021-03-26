@@ -6,13 +6,13 @@
           captureUncaught: true,
           captureUnhandledRejections: true,
 		  server: {
-			  root: "file:///Users/david/Documents/dev-stuff/js-demo/"
+			  root: "file:///Users/david/Documents/js-demo/"
 		  },
           payload: {
               environment: "production",
 			  foo: "bar",
-			  someotherkey: "donations"//,
-			  //code_version: "SHA",
+			  someotherkey: "donations",
+			  code_version: "141889820903acfcdfaade9af6e2fa65ab5887ca"
           }
       };
       // Rollbar Snippet
@@ -41,11 +41,11 @@
     <script>
 	  
 	  function newMessage() {
-		  msg(text);
+		  message(text);
 	  }
 
-      function error() {
-		  var message = newMessage("donation received")
+      function createError() {
+		  var message = newerMsg("donation received")
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
@@ -84,7 +84,7 @@
     <br>
     Make a Donation
     <br>
-    <button onclick="error();">$25</button>
+    <button onclick="createError();">$25</button>
     <button onclick="sayThankYou();">$100</button>
     <br>
   </body>
