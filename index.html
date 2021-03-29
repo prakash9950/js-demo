@@ -5,13 +5,15 @@
           accessToken: "31edaefe06424154b53688d621e63959",
           captureUncaught: true,
           captureUnhandledRejections: true,
-		  server: {
-			  root: "file:///Users/david/Documents/dev-stuff/js-demo/"
-		  },
+		  autoInstrument: true,
           payload: {
               environment: "production",
 			  foo: "bar",
-			  someotherkey: "donations"
+			  someotherkey: "donations",
+			  server: {
+				  root: "file:///Users/david/Documents/dev-stuff/js-demo/"
+			  },
+			  code_version: "b4499600fc55628ba170b96ab24eb60b8c76a5b0"
           }
       };
       // Rollbar Snippet
