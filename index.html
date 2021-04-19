@@ -13,7 +13,10 @@
 			  server: {
 				  root: "file:///Users/david/Documents/dev-stuff/js-demo/"
 			  },
-			  code_version: "b4499600fc55628ba170b96ab24eb60b8c76a5b0"
+			  code_version: "bf7ada630764faa7adf82d51606ef47ec47d4f14",
+			  person: {
+			  	
+			  }
           }
       };
       // Rollbar Snippet
@@ -46,13 +49,12 @@
 	  }
 
       function createError() {
-		  var message = ccTest("donation received")
+		  newMessage("thanks")
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
       function sayThankYou() {
-        var message = getMessage('thank you');
-        alert(message);
+		  respondWith("thank you");
       }
 
       function onClick() {
