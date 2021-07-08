@@ -7,17 +7,17 @@ var _rollbarConfig = {
     captureUnhandledRejections: true,
     payload: {
         environment: "production",
-		code_version: "7a27f6a2993ecfa388455eb480509702af28b991",
+		code_version: "79b2071e3350a8779d43f203bdd698ae7f34f3e6",
+		team: "donations",
+		
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
 		},
-		key1: "A",
-		key2: "1",
-		//person: {
-			//id: 117,
-			//email: "chief@unsc.gov",
-			//username: "john-halo"
-		//}
+		// person: {
+		// 	id: 117,
+		// 	email: "chief@unsc.gov",
+		// 	username: "john-halo"
+		// }
     }
 };
 // Rollbar Snippet
@@ -31,11 +31,21 @@ var _rollbarConfig = {
 	  }
 
       function createError() {
+		  Rollbar.configure({
+			  payload: {
+				  amount: 25
+			  }
+		  });
 		  newMessage('donation received')
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
       function sayThankYou() {
+		  Rollbar.configure({
+			  payload: {
+				  amount: 100
+			  }
+		  });
 		  respondWith("thank you");
       }
 
