@@ -9,7 +9,6 @@ var _rollbarConfig = {
         environment: "production",
 		code_version: "0a991b21b9ba0deb0ee5064f450b81a4eb985870",
 		team: "donations",
-		//
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
 		},
@@ -36,7 +35,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  newMessage('donation received')
+		  newEvent('donation received')
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
@@ -46,7 +45,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  respondWith("thank you");
+		  respond("thank you");
       }
 
       function onClick() {
