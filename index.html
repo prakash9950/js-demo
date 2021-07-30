@@ -5,18 +5,19 @@ var _rollbarConfig = {
     accessToken: "31edaefe06424154b53688d621e63959",
     captureUncaught: true,
     captureUnhandledRejections: true,
+	autoInstrument: true,
     payload: {
         environment: "production",
 		code_version: "0a991b21b9ba0deb0ee5064f450b81a4eb985870",
-		team: "donations",
+		extraDataKey: "donations",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
 		},
-		// person: {
-		// 	id: 117,
-		// 	email: "chief@unsc.gov",
-		// 	username: "john-halo"
-		// }
+		person: {
+			id: 117,
+			email: "chief@unsc.gov",
+			username: "john-halo"
+		}
     }
 };
 // Rollbar Snippet
@@ -35,17 +36,17 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  newEvent('donation received')
+		  testOne('donation received')
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
-f
+
       function sayThankYou() {
 		  Rollbar.configure({
 			  payload: {
 				  amount: 100
 			  }
 		  });
-		  respond("thank you");
+		  testTwo("thank you");
       }
 
       function onClick() {
