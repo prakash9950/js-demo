@@ -8,8 +8,9 @@ var _rollbarConfig = {
 	autoInstrument: true,
     payload: {
         environment: "production",
-		code_version: "0e8f498bebc1f1835d5b91b5a50615d5545931b1",
-		extraDataKey: "donations",
+		code_version: "f65649707c6c9d9a5a0d1f547d76b9dd9044d728",
+		context: "home#index",
+		team: "donations",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
 		},
@@ -36,7 +37,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  missingMethod3('donation received');
+		  toast('donation received');
 	      Rollbar.error("$25 button is broken", {sample_extra_data: "rich additional context!"});
       }
 
@@ -46,7 +47,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  missingMethod4("thank you");
+		  toast("thank you");
       }
 
       function onClick() {
