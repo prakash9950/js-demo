@@ -7,7 +7,7 @@ var _rollbarConfig = {
     captureUnhandledRejections: true,
 	autoInstrument: true,
     payload: {
-        environment: "development",
+        environment: "production",
 		//code_version: GIT_VERSION,
 		context: "home#index",
 		server: {
@@ -41,7 +41,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  mergeAnother('donation received');
+		  sendBack('donation received');
       }
 
       function sayThankYou() {
@@ -50,7 +50,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  mergeMeToo("thank you");
+		  sendBack("thank you");
       }
 
       function onClick() {
