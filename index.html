@@ -7,8 +7,8 @@ var _rollbarConfig = {
     captureUnhandledRejections: true,
 	autoInstrument: true,
     payload: {
-        environment: "staging",
-		code_version: "3740281f8afdf8d1698aebba737f026895033ee0",
+        environment: "production",
+		code_version: "cc5782cec2a648b7f8a53579a8024f2ffc567a2f",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -41,7 +41,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  staging('donation received');
+		  returnMsg('donation received');
       }
 
       function sayThankYou() {
@@ -50,7 +50,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  staging("thank you");
+		  returnMsg("thank you");
       }
 
       function onClick() {
