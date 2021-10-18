@@ -8,7 +8,7 @@ var _rollbarConfig = {
 	autoInstrument: true,
     payload: {
         environment: "production",
-		code_version: "cc5782cec2a648b7f8a53579a8024f2ffc567a2f",
+		code_version: "4969ecb28111c165c1b710e32065dc42e5edcb8c",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -41,7 +41,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  returnMsg('donation received');
+		  versionTracking1('donation received');
       }
 
       function sayThankYou() {
@@ -50,7 +50,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  returnMsg("thank you");
+		  versionTracking2("thank you");
       }
 
       function onClick() {
