@@ -8,7 +8,7 @@ var _rollbarConfig = {
 	autoInstrument: true,
     payload: {
         environment: "production",
-		code_version: "60fbb70b3ab42344c327dafd124624af26b5a701",
+		//code_version: GIT_REVISION,
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -41,7 +41,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  aa1('donation received');
+		  slackvideo1('donation received');
       }
 
       function sayThankYou() {
@@ -50,7 +50,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  aa2("thank you");
+		  slackvideo2("thank you");
       }
 
       function onClick() {
