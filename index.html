@@ -8,7 +8,7 @@ var _rollbarConfig = {
 	autoInstrument: true,
     payload: {
         environment: "production",
-		//code_version: GIT_REVISION,
+		code_version: "39442aa1d97ac43cb2aca9dbcceb953d1fea8513",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -18,11 +18,11 @@ var _rollbarConfig = {
 		foo: "bar",
 		extraData: "hey",
 		
-		// person: {
-		// 	id: 117,
-		// 	email: "chief@unsc.gov",
-		// 	username: "john-halo"
-		// }
+		person: {
+			id: 117,
+			email: "chief@unsc.gov", 
+			username: "john-halo" 
+		}
     }
 };
 // Rollbar Snippet
@@ -41,7 +41,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  slackvideo1('donation received');
+		  sendBack('donation received');
       }
 
       function sayThankYou() {
@@ -50,7 +50,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  slackvideo2("thank you");
+		  sendBack("thank you");
       }
 
       function onClick() {
