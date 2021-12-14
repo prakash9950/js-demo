@@ -29,6 +29,8 @@ jobs:
   # You may pin to the exact commit or the version.
         uses: rollbar/github-deploy-action@2.1.1
         with:
+          env:
+            ROLLBAR_ACCESS_TOKEN: d8ad7e8845d149cca28fe32a62858c81
           # Environment where your code is running. e.g. production
           environment: production
           # Version deployed
