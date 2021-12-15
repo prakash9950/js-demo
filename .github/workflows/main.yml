@@ -30,7 +30,7 @@ jobs:
         uses: rollbar/github-deploy-action@2.1.1
         env:
             ROLLBAR_ACCESS_TOKEN: ${{secrets.ROLLBARSERVER}}
-            ROLLBAR_USERNAME: `davidwoller`
+            ROLLBAR_USERNAME: 'davidwoller'
         with:
           # Environment where your code is running. e.g. production
           environment: 'production'
