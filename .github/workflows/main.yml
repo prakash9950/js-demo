@@ -29,7 +29,7 @@ jobs:
   # You may pin to the exact commit or the version.
         uses: rollbar/github-deploy-action@2.1.1
         env:
-            ROLLBAR_ACCESS_TOKEN: ${{secrets.ROLLBARWRITE}}
+            ROLLBAR_ACCESS_TOKEN: ${{secrets.ROLLBARSERVER}}
         with:
           # Environment where your code is running. e.g. production
           environment: 'production'
