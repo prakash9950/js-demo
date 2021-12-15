@@ -34,4 +34,4 @@ jobs:
           # Environment where your code is running. e.g. production
           environment: 'production'
           # Version deployed
-          version: ${{GITHUB_SHA}}
+          version: ${{github.sha}}
