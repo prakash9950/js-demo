@@ -18,6 +18,9 @@ var _rollbarConfig = {
 		foo: "bar",
 		extraData: "hey",
 		
+		span_id: "abc",
+		trace_id: "123",
+		
 		person: {
 			id: 117,
 			email: "chief@unsc.gov", 
@@ -36,12 +39,13 @@ var _rollbarConfig = {
 	  }
 
       function createError() {
+		  
 		  Rollbar.configure({
 			  payload: {
 				  amount: 25
 			  }
 		  });
-		  acceptDonation('donation received');
+		  sESync('donation received');
       }
 
       function sayThankYou() {
@@ -50,7 +54,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  acceptDonation('thank you');
+		  sESync('thank you');
       }
 
       function onClick() {
