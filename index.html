@@ -8,7 +8,7 @@ var _rollbarConfig = {
 	autoInstrument: true,
     payload: {
         environment: "production",
-		code_version: "43344fbe6d7283ac8108b6a45845bf817e844279",
+		code_version: "2ff985b0c4351490afefcdccf020e2822d1cd20e",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -18,8 +18,8 @@ var _rollbarConfig = {
 		foo: "bar",
 		extraData: "hey",
 		
-		span_id: "abc",
-		trace_id: "123",
+		key1: "abc",
+		key2: "123",
 		
 		person: {
 			id: 117,
@@ -45,7 +45,7 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  newUserTraining('donation received');
+		  webinar('donation received');
       }
 
       function sayThankYou() {
@@ -54,7 +54,7 @@ var _rollbarConfig = {
 				  amount: 100
 			  }
 		  });
-		  newUserTraining('thank you');
+		  webinar('thank you');
       }
 
       function onClick() {
