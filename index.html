@@ -1,14 +1,23 @@
 <html>
   <head>
 <script>
+ var transformer =  function transform(payload){
+      console.log(payload);
+      console.log(payload.uuid);
+      // Modify the payload as required
+      var elem = document.getElementById("support_link")
+      elem.href = "https://rollbar.com/item/uuid/?uuid=" + payload.uuid
+      elem.textContent = payload.uuid;
+}
 var _rollbarConfig = {
     accessToken: "31edaefe06424154b53688d621e63959",
     captureUncaught: true,
     captureUnhandledRejections: true,
 	autoInstrument: true,
+	transform: transformer,
     payload: {
         environment: "production",
-		code_version: "2ff985b0c4351490afefcdccf020e2822d1cd20e",
+		code_version: "e060514ac35725e5fa3e420e8ad700ecbb7cbc4f",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -45,16 +54,17 @@ var _rollbarConfig = {
 				  amount: 25
 			  }
 		  });
-		  webinar('donation received');
+		  newItem('donation received');
       }
 
       function sayThankYou() {
+		  
 		  Rollbar.configure({
 			  payload: {
 				  amount: 100
 			  }
 		  });
-		  webinar('thank you');
+		  newItem('thank you');
       }
 
       function onClick() {
@@ -90,5 +100,8 @@ var _rollbarConfig = {
     <button onclick="createError();">$25</button>
     <button onclick="sayThankYou();">$100</button>
     <br>
+    </br>
+    <a id="support_link" href="">Support Link Here</a>
+    </br>
   </body>
 </html>
