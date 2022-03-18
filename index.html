@@ -17,7 +17,7 @@ var _rollbarConfig = {
 	transform: transformer,
     payload: {
         environment: "production",
-		code_version: "e060514ac35725e5fa3e420e8ad700ecbb7cbc4f",
+		code_version: "92b7d0e69faa07140836cf4de27c42901a3a6915",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
@@ -47,24 +47,24 @@ var _rollbarConfig = {
 		  message(text);
 	  }
 
-      function createError() {
+      function twentyFiveDollars() {
 		  
 		  Rollbar.configure({
 			  payload: {
 				  amount: 25
 			  }
 		  });
-		  newItem('donation received');
+		  collectDonation('donation received');
       }
 
-      function sayThankYou() {
+      function oneHundredDollars() {
 		  
 		  Rollbar.configure({
 			  payload: {
 				  amount: 100
 			  }
 		  });
-		  newItem('thank you');
+		  collectDonation('thank you');
       }
 
       function onClick() {
@@ -97,8 +97,8 @@ var _rollbarConfig = {
     <br>
     Make a Donation
     <br>
-    <button onclick="createError();">$25</button>
-    <button onclick="sayThankYou();">$100</button>
+    <button onclick="twentyFiveDollars();">$25</button>
+    <button onclick="oneHundredDollars();">$100</button>
     <br>
     </br>
     <a id="support_link" href="">Support Link Here</a>
