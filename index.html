@@ -17,10 +17,11 @@ var _rollbarConfig = {
 	transform: transformer,
     payload: {
         environment: "production",
-		code_version: "25b96ed2fbe87273153c3653ec057da36a8cff32",
+		code_version: "afbdec1fc89db0f29b53c244e33c47f9ec74b200",
 		context: "home#index",
 		server: {
-			root: "file:///Users/david/Documents/dev-stuff/js-demo/"
+			root: "file:///Users/david/Documents/dev-stuff/js-demo/",
+			host: "local"
 		},
 		
 		team: "donations",
@@ -54,7 +55,7 @@ var _rollbarConfig = {
 				  amount: 25,
 			  }
 		  });
-		  aprilEighteen('donation received');
+		  crashCourse('donation received');
       }
 
       function oneHundredDollars() {
@@ -64,7 +65,7 @@ var _rollbarConfig = {
  				  amount: 100
  			  }
  		  });
-		  aprilEighteen('thank you');
+		  crashCourse('thank you');
       }
 
       function onClick() {
