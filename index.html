@@ -6,8 +6,9 @@
       console.log(payload.uuid);
       // Modify the payload as required
       var elem = document.getElementById("support_link")
-      elem.href = "https://rollbar.com/item/uuid/?uuid=" + payload.uuid
+      elem.href = "https://rollbar.com/occurrence/uuid/?uuid=" + payload.uuid
       elem.textContent = payload.uuid;
+	  
 }
 var _rollbarConfig = {
     accessToken: "31edaefe06424154b53688d621e63959",
@@ -17,7 +18,7 @@ var _rollbarConfig = {
 	transform: transformer,
     payload: {
         environment: "production",
-		code_version: "92ededd758e5af901351b68c18b5de59ed61b58f",
+		code_version: "2de64fa0da39044ed2e54127472ecfd157f4586f",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/",
@@ -55,7 +56,7 @@ var _rollbarConfig = {
 				  amount: 25,
 			  }
 		  });
-		  maySixteen('donation received');
+		  juneThirteen('donation received');
       }
 
       function oneHundredDollars() {
@@ -65,7 +66,7 @@ var _rollbarConfig = {
  				  amount: 100
  			  }
  		  });
-		  maySixteen('thank you');
+		  juneThirteen('thank you');
       }
 
       function onClick() {
