@@ -18,7 +18,7 @@ var _rollbarConfig = {
 	transform: transformer,
     payload: {
         environment: "production",
-		code_version: "2de64fa0da39044ed2e54127472ecfd157f4586f",
+		code_version: "04867f18fed361227eee29089c5d6b5ce6be5239",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/",
@@ -50,13 +50,13 @@ var _rollbarConfig = {
 	  }
 
       function twentyFiveDollars() {
-		  
+		  Rollbar.info("starting $25 donation routine")
 		  Rollbar.configure({
 			  payload: {
 				  amount: 25,
 			  }
 		  });
-		  juneThirteen('donation received');
+		  juneTwentyOne('donation received');
       }
 
       function oneHundredDollars() {
@@ -66,7 +66,7 @@ var _rollbarConfig = {
  				  amount: 100
  			  }
  		  });
-		  juneThirteen('thank you');
+		  juneTwentyOne('thank you');
       }
 
       function onClick() {
