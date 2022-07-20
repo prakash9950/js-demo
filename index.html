@@ -10,6 +10,7 @@
       elem.textContent = payload.uuid;
 	  
 }
+
 var _rollbarConfig = {
     accessToken: "31edaefe06424154b53688d621e63959",
     captureUncaught: true,
@@ -18,7 +19,7 @@ var _rollbarConfig = {
 	transform: transformer,
     payload: {
         environment: "production",
-		code_version: "04867f18fed361227eee29089c5d6b5ce6be5239",
+		code_version: "23965fb92ffbfb7092cfd4ce3340535b3d79f4c3",
 		context: "home#index",
 		server: {
 			root: "file:///Users/david/Documents/dev-stuff/js-demo/",
@@ -56,7 +57,7 @@ var _rollbarConfig = {
 				  amount: 25,
 			  }
 		  });
-		  juneTwentyOne('donation received');
+		  newDemo('donation received');
       }
 
       function oneHundredDollars() {
@@ -66,7 +67,7 @@ var _rollbarConfig = {
  				  amount: 100
  			  }
  		  });
-		  juneTwentyOne('thank you');
+		  newDemo('thank you');
       }
 
       function onClick() {
